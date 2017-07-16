@@ -22,15 +22,6 @@
 
 <body>
     <div class="container">
-        <div class="row breadcrumbs">
-            <a href="location.html">Study Location</a>
-            <a href="consumption.html">Monthly Electric Consumption</a>
-            <a href="meter.html">Meter Details</a>
-            <a href="area.html">Meter Areas</a>
-            <a href="equipment.html">Equipment in Area</a>
-            <a href="review.html" class="current">Review Your Study</a>
-            <a href="submit.html">Submit for Review</a>
-        </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                 <!-- Main -->
@@ -38,18 +29,18 @@
                     <section id="title">
                         <div class="row pageTitle">
                             <div class="col-md-10 col-sm-11 col-xs-11">
-                                <h2>Review Your Study</h2></div>
+                                <h2>Your Submitted Study</h2></div>
                             <div class="middle col-md-2 col-sm-1 col-xs-1 rightGuide">
-                                <a href="#" data-tooltip title="Carefully review your information before submitting." class="tooltip">?</a>
+                                <a href="#" data-tooltip title="This study has been submitted and can no longer be edited." class="tooltip">?</a>
                             </div>
                         </div>
                     </section>
                     <section id="warning">
                         <div class="row middle subTitle textCenter">
                             <div class="col-xs-12 col-sm-8 col-sm-offset-2 marginTop">
-                                <h2>Please Read Carefully</h2>
-                                <p>Take the time to review all your information - once you submit this study for review, you'll no longer have access to make changes.
-                                    <br/>Also consider <a href="">Printing this page</a> for your records.</p>
+                                <h2>This study has been submitted</h2>
+                                <p>You no longer have access to make changes.
+                                    <br/><a href="">Click here to print this page for your records.</a></p>
                             </div>
                         </div>
                     </section>
@@ -58,14 +49,12 @@
                             <div class="sidebar backgroundBlue">
                                 <div class="infoBlock area">
                                     <h3>Meter Area</h3>
-                                    <a href="./area.html">Change Information</a>
                                 </div>
                                 <div class="infoBlock location">
                                     <h3>Production Meter ID ###</h3>
-                                    <a href="./meter.html">Change Information</a>
 
                                     <p>123 Mainstreet</p>
-                                    <p>Salt Lake City, Utah 84101</p>
+                                    <p>Atlanta, Georgia 30101</p>
                                 </div>
                                 <div class="infoBlock consumption">
                                     <p>Yearly Kilowatt Consumption: <span id="kilowattConsumption">##</span></p>
@@ -94,7 +83,7 @@
                                                     <td>10</td>
                                                     <td>1000</td>
                                                     <td>100%</td>
-                                                    <td class="textRight links"><a href="">edit</a> | <a href="">delete</a></td>
+                                                    <td class="textRight links"> </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -113,15 +102,10 @@
                         <div class="bottomNavigation">
                             <div class="row end-sm">
                                 <div class="col-xs-12 col-sm-10 col-md-10 middle message">
-                                    <h2>Are you ready to submit your study?</h2>
+                                    <h2>Back to Dashboard</h2>
                                 </div>
                                 <div class="col-xs-12 col-sm-2 col-md-2 middle">
-                                    <a href="./submit.html"><button class="smbuttonRed">Finish</button></a>
-                                </div>
-                            </div>
-                            <div class="row end-sm start-xs">
-                                <div class="col-xs-12 col-sm-6 col-sm-offset-6 helper">
-                                    <a class="backward" href="./location.html">Go to Location Information</a>
+                                    <a href="./index.html"><button class="smbuttonRed">BACK</button></a>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +117,6 @@
                 <section id="nav">
                     <div class="sidebar">
                         <a href="./index.html"><button class="buttonBlue">back to dashboard</button></a>
-                        <button class="buttonRed">SAVE ALL PROGRESS</button>
                         <button class="buttonRed">SIGN OUT</button>
                     </div>
                     <button id="sL_toggle">Show Location Information</button>
@@ -141,14 +124,12 @@
                         <div class="infoBlock location">
                             <h3>Location Name</h3>
                             <p>123 Mainstreet</p>
-                            <p>Salt Lake City, Utah 84101</p>
-                            <a href="./location.html">Change Location Information</a>
+                            <p>Atlanta, Georgia 30101</p>
                         </div>
                         <div class="infoBlock account">
                             <p>Account Holder</p>
                             <p>owner@email.com</p>
                             <p>900-893-1029</p>
-                            <a href="./account.html">Change Account Information</a>
                         </div>
                         <div class="infoBlock meters">
                             <h3>Production Meters</h3>
@@ -158,11 +139,10 @@
                                         <p>Meter ID ###</p>
                                     </div>
                                     <div class="col-xs">
-                                        <a href="">VIEW</a>
                                     </div>
                                 </div>
-                                <div class="row area">
-                                    <a href="./area.html">Area</a>
+                                <div class="row area submitted">
+                                    <p>Area</p>
                                 </div>
                             </div>
                             <div class="meter" id="###">
@@ -171,40 +151,11 @@
                                         <p>Meter ID ###</p>
                                     </div>
                                     <div class="col-xs">
-                                        <a href="">VIEW</a>
                                     </div>
                                 </div>
-                                <div class="row area">
-                                    <a href="./area.html">Area</a>
+                                <div class="row area submitted">
+                                    <p>Area</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row breadcrumbsMobile">
-                        <div class="col-xs-12">
-                            <button id="bM_toggle">Show Steps</button>
-                        </div>
-                        <div id="bM_expand" style="display:none">
-                            <div class="col-xs-12">
-                                <a href="">Study Location</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="">Monthly Electric Consumption</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="">Meter Details</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="">Meter Areas</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="">Equipment in Area</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="" class="current">Review Your Study</a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="">Submit for Review</a>
                             </div>
                         </div>
                     </div>

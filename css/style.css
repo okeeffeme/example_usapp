@@ -63,7 +63,7 @@ select {
     -moz-appearance: none;
     appearance: none;
     background: url(arrow-01.png) 98% / 10% no-repeat #fff;
-} 
+}
 
 @media only screen and (max-width: 62em) {table {font-size: 14px;}}
 
@@ -143,6 +143,7 @@ td:nth-child(2) {
     background-color: transparent;
     color: #219ebe;
     border: 2px solid #b4e3f3;
+		box-sizing: border-box;
     text-transform: uppercase;
     min-width: 300px;
     padding: 20px;
@@ -288,11 +289,13 @@ a.tooltip:before {content: "" !important;}
     margin-bottom: 0;
 }
 
-.sidebar .meters .area a {
+.sidebar .meters .area a,
+.sidebar .meters .area p {
     margin-left: 20px;
     font-weight: 400;
 }
-.sidebar .meters .area a:before {
+.sidebar .meters .area a:before,
+.sidebar .meters .area p:before {
     content: "- "
 }
 
@@ -320,7 +323,7 @@ a.tooltip:before {content: "" !important;}
 }
 
 /*for bottomNavigation messages*/
-.message h2 { 
+.message h2 {
     font-weight: 400 !important;
     margin-top: 0px;
 }
@@ -353,9 +356,9 @@ a.tooltip:before {content: "" !important;}
     line-height: 1.25;
     border: 2px solid #b4e3f3;
     transition: .2s;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-     box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
 }
 .formControl:hover, .formControl:focus, .formControl:active {
     border: 2px solid #219dbe;
@@ -367,8 +370,8 @@ button.formControl  {
     color: #fff;
     display: block;
 }
-button.formControl:hover, 
-button.formControl:focus, 
+button.formControl:hover,
+button.formControl:focus,
 button.formControl:active {background-color: #b52007;border-color: #b52007;}
 
 /*Opening and Closing hours inputs*/
@@ -377,9 +380,9 @@ button.formControl:active {background-color: #b52007;border-color: #b52007;}
     line-height: 1.25;
     border: 2px solid #b4e3f3;
     transition: .2s;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-     box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
 }
 .opHours:hover, .opHours:focus, .opHours:active {
     border: 2px solid #219dbe;
@@ -439,7 +442,7 @@ form.center select {
 
 .consumption .row{
     margin-top: 40px;
-    margin-bottom: 40px;  
+    margin-bottom: 40px;
 }
 
 /*
