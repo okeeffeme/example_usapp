@@ -1,0 +1,359 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Utility Study</title>
+    <meta name="description" content="Utility Study">
+    <meta name="author" content="Enguard">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row breadcrumbs">
+            <a href="location.html">Study Location</a>
+            <a href="consumption.html">Monthly Electric Consumption</a>
+            <a href="meter.html" class="current">Add Meter Details</a>
+            <a href="area.html">Add Meter Areas</a>
+            <a href="equipment.html">Add Equipment</a>
+            <a href="review.html">Review Your Study</a>
+            <a href="submit.html">Submit for Review</a>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <!-- Main -->
+                <div class="main">
+                    <section id="title">
+                        <div class="row pageTitle">
+                            <div class="col-md-10 col-sm-11 col-xs-11">
+                                <h2>Add Details to the Production Meter</h2></div>
+                            <div class="middle col-md-2 col-sm-1 col-xs-1 rightGuide">
+                                <a href="#" data-tooltip title="Not the meter you're looking for? Select another meter from the sidebar below." class="tooltip">?</a></div>
+                        </div>
+                    </section>
+                    <section id="body">
+                        <div class="row middle subTitle">
+                            <h2>Production Meter Details</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <form>
+                                    <div class="row formGroup">
+                                        <p class="col-xs-12 col-sm-3 col-md-3 middle textDisplayRight">Is this meter located at the primary study location?</p>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="locAnswer" value="yes"> Yes
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="locAnswer" value="no"> No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="meterID" class="col-xs-12 col-sm-3 col-md-3">Meter ID</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="meterID" aria-describedby="meterID" placeholder="Meter ID from Location Information">
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="address" class="col-xs-12 col-sm-3 col-md-3">Address</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="address" aria-describedby="address" placeholder="Address from Location Information">
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="city" class="col-xs-12 col-sm-3 col-md-3">City</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="city" aria-describedby="city" placeholder="City from Location Information">
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="state" class="col-xs-12 col-sm-3 col-md-3">State</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="state" aria-describedby="state" placeholder="State from Location Information">
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="zip" class="col-xs-12 col-sm-3 col-md-3">Postal Code / ZIP</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="zip" aria-describedby="zip" placeholder="ZIP from Location Information">
+                                        </div>
+                                    </div>
+                                    <div class="row formGroup">
+                                        <label for="description" class="col-xs-12 col-sm-3 col-md-3">Description</label>
+                                        <div class="col-xs-12 col-sm-9 col-md-9">
+                                            <input type="text" class="formControl" id="description" aria-describedby="description" placeholder="">
+                                        </div>
+                                    </div>
+                                    <section id="operationalHours">
+                                        <div class="row">
+                                            <p class="col-xs-12 col-sm-3 col-md-3 top textDisplayRight">Normal Operational Days</p>
+                                            <div class="col-xs-12 col-sm-9 col-md-9">
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Monday"> Monday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="mHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="mHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Tuesday"> Tuesday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="tHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="tHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Wednesday"> Wednesday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="wHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="wHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Thursday"> Thursday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="thHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="thHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Friday"> Friday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="fHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="fHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Saturday"> Saturday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="saHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="saHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row formGroup">
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="checkbox" name="days" value="Sunday"> Sunday
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="snHours" class="opHours" value="open"> Open
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <label class="checkbox-inline">
+                                                            <input type="time" name="snHours" class="opHours" value="close"> Close
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="backgroundBlue row middle">
+                                                    <div class="col-xs">
+                                                        <p class="textCenter" id="total">#</p>
+                                                    </div>
+                                                    <div class="col-xs">
+                                                        <p class="">Total Operating Hours per Year</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="bottomNavigation">
+                        <div class="bottomNavigation">
+                            <div class="row end-sm">
+                                <div class="col-xs-12 col-sm-offset-8 col-sm-4 col-md-offset-8 col-md-4">
+                                    <button class="smbuttonBlue">Save</button>
+                                </div>
+                            </div>
+                            <div class="row end-sm">
+                                <div class="col-xs-12 col-sm-10 col-md-10 middle message">
+                                    <h2>Ready to add areas to this meter?</h2>
+                                </div>
+                                <div class="col-xs-12 col-sm-2 col-md-2 middle">
+                                    <button class="smbuttonRed">Next</button>
+                                </div>
+                            </div>
+                            <div class="row end-sm start-xs">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-6 helper">
+                                    <a class="backward">Go back to Location Information</a>
+                                    <a class="forward">Go to next Production Meter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 sidebar">
+                <!-- Sidebar -->
+                <section id="nav">
+                    <div class="sidebar">
+                        <button class="buttonBlue">Back to dashboard</button>
+                        <button class="buttonRed">SAVE ALL PROGRESS</button>
+                        <button class="buttonRed">SIGN OUT</button>
+                    </div>
+                    <button id="sL_toggle">Show Location Information</button>
+                    <div class="sidebar backgroundBlue" id="sL_expand">
+                        <div class="infoBlock location">
+                            <h3>Location Name</h3>
+                            <p>123 Mainstreet</p>
+                            <p>Salt Lake City, Utah 84101</p>
+                            <a href="">Change Location Information</a>
+                        </div>
+                        <div class="infoBlock account">
+                            <p>Account Holder</p>
+                            <p>owner@email.com</p>
+                            <p>900-893-1029</p>
+                            <a href="">Change Account Information</a>
+                        </div>
+                        <div class="infoBlock meters">
+                            <h3>Production Meters</h3>
+                            <div class="meter" id="###">
+                                <div class="row id">
+                                    <div class="col-xs">
+                                        <p>Meter ID ###</p>
+                                    </div>
+                                    <div class="col-xs">
+                                        <a href="">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="row area">
+                                    <a href="">Area</a>
+                                </div>
+                            </div>
+                            <div class="meter" id="###">
+                                <div class="row id">
+                                    <div class="col-xs">
+                                        <p>Meter ID ###</p>
+                                    </div>
+                                    <div class="col-xs">
+                                        <a href="">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="row area">
+                                    <a href="">Area</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row breadcrumbsMobile">
+                        <div class="col-xs-12">
+                            <button id="bM_toggle">Show Steps</button>
+                        </div>
+                        <div id="bM_expand" style="display:none">
+                            <div class="col-xs-12">
+                                <a href="">Study Location</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Monthly Electric Consumption</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="" class="current">Add Meter Details</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Add Meter Areas</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Add Equipment</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Review Your Study</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Submit for Review</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/Tooltip.js"></script>
+    <script>
+        function alert() {
+            console.log("test");
+        }
+    </script>
+</body>
+
+</html>

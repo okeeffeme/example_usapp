@@ -1,0 +1,451 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+@media only screen and (max-width: 62em) {
+    .sidebar {
+        -ms-flex-order: -1;
+        -webkit-box-ordinal-group: 0;
+        order: -1;
+    }
+}
+
+/*
+** Utility Classes
+*/
+a {color: #219ebe;cursor: pointer;}
+a:hover, a:focus, a:active {color: #003741}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 42em) {.container {margin: 20px;}}
+
+.textDisplayRight {text-align: right;}
+@media only screen and (max-width: 62em) {.textDisplayRight {text-align: left;}}
+
+.textRight {text-align: right;}
+.textLeft {text-align: left}
+.textCenter {text-align: center;}
+.marginTop {margin-top: 40px;}
+.marginBottom {margin-bottom: 40px;}
+.paddingTop {padding-top: 20px;}
+.paddingBottom {padding-bottom: 20px;}
+
+.disabled {cursor: not-allowed !important; color: #555 !important;}
+
+.textRed {color: #e24227}
+.backgroundBlue {background-color: rgba(179, 226, 242, 0.3);}
+.backgroundDark {background-color: #003640;color: #fff;font-weight: 600;}
+
+.rightGuide {
+    color: #219ebe;
+    font-weight: 600;
+    text-align: right;
+}
+@media only screen and (max-width: 62em) {.rightGuide {text-align: left;}}
+
+.middle {
+    margin: auto;
+}
+
+select {
+    border: 2px solid #b4e3f3;
+    border-radius: 0px;
+    background: #fff;
+    min-width: 150px;
+    padding: 5px 35px 5px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(arrow-01.png) 98% / 10% no-repeat #fff;
+} 
+
+@media only screen and (max-width: 62em) {table {font-size: 14px;}}
+
+.tableA {
+    margin-top: 40px;
+    width: 100%;
+}
+
+#review .tableA {margin-top: 0px !important;}
+
+.tableB {
+    margin-top: 0px;
+    width: 100%;
+}
+.tableA .links, .tableB .links {
+    width: 90px;
+    color: #219ebe;
+}
+
+.tableA .links a, .tableB .links a{
+    font-weight: 200;
+}
+.tableA thead {
+    background-color: #003640;
+    color: #fff;
+    font-weight: 400;
+}
+.tableA thead tr {border-bottom: 0px;}
+
+tr {
+    height: 50px;
+    border-bottom: 2px solid #b4e3f3;
+}
+
+td:nth-child(2) {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+}
+
+.tableB tr:first-child {
+    border-top: 2px solid #b4e3f3;
+}
+
+/*
+** Button Classes
+*/
+
+.buttonRed {
+    background-color: #e24227;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: .2s;
+}
+.buttonRed:hover, .buttonRed:focus, .buttonRed:active {
+    background-color: #b52007;
+}
+
+.smbuttonRed {
+    background-color: #e24227;
+    border: 2px solid #e24227;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 80px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: .2s;
+}
+.smbuttonRed:hover, .smbuttonRed:focus, .smbuttonRed:active {
+    background-color: #b52007; border-color: #b52007;
+}
+
+.buttonBlue {
+    background-color: transparent;
+    color: #219ebe;
+    border: 2px solid #b4e3f3;
+    text-transform: uppercase;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: .2s;
+}
+.buttonBlue:hover, .buttonBlue:focus, .buttonBlue:active {
+    border: 2px solid #219ebe;
+}
+.smbuttonBlue {
+    background-color: transparent;
+    color: #219ebe;
+    border: 2px solid #b4e3f3;
+    text-transform: uppercase;
+    min-width: 80px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    transition: .2s;
+}
+.smbuttonBlue:hover, .smbuttonBlue:focus, .smbuttonBlue:active {
+    border: 2px solid #219ebe;
+}
+
+#bM_toggle, #sL_toggle {
+    width: 100%;
+    padding: 20px;
+    color: #219ebe;
+    background-color: rgba(179, 226, 242, 0.3);
+}
+ #sL_toggle{
+    display: none;
+}
+#bM_toggle{
+    margin-bottom: 20px;
+}
+/*
+** General Classes
+*/
+
+a.tooltip {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    border: 3px solid #219ebe;
+    border-radius: 16px;
+    padding: 1px;
+    margin-left: 10px;
+    transition: .2s;
+}
+a.tooltip:hover, a.tooltip:focus {color: #219ebe; background-color: rgba(33, 158, 190, 0.2);}
+a.tooltip:before {content: "" !important;}
+
+.checkbox-inline, .radio-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/*Breadcrumbs*/
+
+.breadcrumbs {
+    margin: 20px 0;
+}
+.breadcrumbs a:not(:last-child):after {
+    content: " >";
+    font-weight: 400;
+    color: #666;
+}
+
+.breadcrumbsMobile {display: none; margin-bottom: 20px;}
+.breadcrumbsMobile a.current:before {
+    content: "> ";
+    font-weight: 400;
+    color: red;
+}
+
+.breadcrumbs a, .breadcrumbsMobile a {
+    font-weight: 400;
+    color: #666;
+}
+.breadcrumbs a:not(:first-child) {
+    margin-left: 5px;
+}
+
+.breadcrumbs a:hover, .breadcrumbs a:focus,.breadcrumbs a:active, .breadcrumbs a.current,
+.breadcrumbsMobile a:hover, .breadcrumbsMobile a:focus,.breadcrumbsMobile a:active, .breadcrumbsMobile a.current {color: red;}
+
+@media only screen and (max-width: 62em) {
+    .breadcrumbs {display: none}
+    .breadcrumbsMobile {display: block}
+}
+@media only screen and (min-width: 62em) {#sL_expand {display: block !important;}}
+/*Mobile toggle for sidebar*/
+@media only screen and (max-width: 62em) {
+    #sL_toggle {display: block}
+    #sL_expand {display: none}
+}
+
+/*For top blue box on internal location pages*/
+#identification {margin-top: 40px;}
+
+#identification h3 {display: inline; margin-right: 20px;}
+
+#identification a {
+    display: inline;
+}
+
+#identification a:nth-child(3):before {
+    content: "| ";
+    color: #219ebe;
+}
+
+
+/*Sidebar present in internal location pages*/
+.sidebar {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    color: #fff
+}
+
+.sidebar .infoBlock {
+    text-align: left;
+    margin: 20px;
+}
+
+.sidebar .infoBlock p{
+    color: #000;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sidebar .meters .area a {
+    margin-left: 20px;
+    font-weight: 400;
+}
+.sidebar .meters .area a:before {
+    content: "- "
+}
+
+.pageTitle {
+    border-bottom: 4px solid #219ebe;
+}
+
+.pageTitle h2 {
+    line-height: 1.2;
+}
+
+.pageTitle p {
+    display: inline-block;
+}
+
+.subTitle h2 {
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+/*Bottom Navigation*/
+.bottomNavigation {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*for bottomNavigation messages*/
+.message h2 { 
+    font-weight: 400 !important;
+    margin-top: 0px;
+}
+
+/*for bottom navigation helpers*/
+.forward:after {
+    content: " >";
+}
+.backward:before {
+    content: "< ";
+}
+
+.bottomNavigation .helper a{
+    font-weight: 400;
+    display: block;
+}
+
+
+.formGroup {
+    margin: 20px 0;
+}
+.formGroup label {padding-top: .5rem; padding-bottom: .5rem; margin-bottom: 0; text-align: right;}
+@media only screen and (max-width: 62em) {.formGroup label {text-align: left;}}
+
+.formControl {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border: 2px solid #b4e3f3;
+    transition: .2s;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+.formControl:hover, .formControl:focus, .formControl:active {
+    border: 2px solid #219dbe;
+}
+
+button.formControl  {
+    background-color: #e24227;
+    border-color: #e24227;
+    color: #fff;
+    display: block;
+}
+button.formControl:hover, 
+button.formControl:focus, 
+button.formControl:active {background-color: #b52007;border-color: #b52007;}
+
+/*Opening and Closing hours inputs*/
+.opHours {
+    font-size: 1rem;
+    line-height: 1.25;
+    border: 2px solid #b4e3f3;
+    transition: .2s;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+.opHours:hover, .opHours:focus, .opHours:active {
+    border: 2px solid #219dbe;
+}
+
+
+/*
+** Dashboard Classes
+*/
+
+.locationTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.locationTitle h4, .locationTitle p {
+    display: inline-block;
+}
+
+.locationTitle .rightGuide a:not(:first-child):before {
+    content: " | ";
+    color: #219ebe !important;
+}
+
+.locationInfo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.locationInfo p {
+    margin: 0px;
+}
+
+.locationAddress {
+    margin-bottom: 20px;
+}
+
+.meterArea a {
+    margin-left: 20px;
+}
+
+.meterArea a:before {
+    content: "- ";
+}
+
+/*
+** Consumption Classes
+*/
+
+form.center {
+    margin: 20px;
+}
+form.center select {
+    width: 100% !Important;
+}
+
+.consumption .row{
+    margin-top: 40px;
+    margin-bottom: 40px;  
+}
+
+/*
+** Equipment Classes
+*/
+
+#percentage {
+    color: red;
+}

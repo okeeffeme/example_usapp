@@ -1,0 +1,286 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Utility Study</title>
+    <meta name="description" content="Utility Study">
+    <meta name="author" content="Enguard">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row breadcrumbs">
+            <a href="location.html">Study Location</a>
+            <a href="consumption.html">Monthly Electric Consumption</a>
+            <a href="meter.html">Add Meter Details</a>
+            <a href="area.html">Add Meter Areas</a>
+            <a href="equipment.html" class="current">Add Equipment</a>
+            <a href="review.html">Review Your Study</a>
+            <a href="submit.html">Submit for Review</a>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <!-- Main -->
+                <div class="main">
+                    <section id="title">
+                        <div class="row pageTitle">
+                            <div class="col-md-10 col-sm-11 col-xs-11">
+                                <h2>Add Equipment to the Area</h2></div>
+                            <div class="middle col-md-2 col-sm-1 col-xs-1 rightGuide">
+                                <a href="#" data-tooltip title="Focus on non-production areas and equipment first. Aim for 100% total consumption." class="tooltip">?</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="identification">
+                        <div class="sidebar backgroundBlue">
+                            <div class="infoBlock location">
+                                <h3>Meter Area</h3>
+                                <a href="">Change Information</a>
+                                <a href="">Select Another Area</a>
+                            </div>
+                            <div class="infoBlock location">
+                                <h3>Production Meter ID ###</h3>
+                                <a href="">Change Information</a>
+                                <a href="">Select Another Meter</a>
+
+                                <p>123 Mainstreet</p>
+                                <p>Salt Lake City, Utah 84101</p>
+                            </div>
+                            <div class="infoBlock consumption">
+                                <p>Yearly Kilowatt Consumption: <span id="kilowattConsumption">##</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="body">
+                        <div class="row middle subTitle textCenter">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                                <h2><span id="percentage">#%</span> of Your Kilowatt Consumption has Been Accounted for This Meter</h2>
+                                <p>Focus on adding non-production areas and equipment first.
+                                    <br/><a href="">Print this guide</a> for help conducting this step of your study.</p>
+                            </div>
+                        </div>
+                        <section id="equipmentAdd">
+                            <div class="row">
+                                <div class="col-xs-12 backgroundDark">
+                                    <p>Search for Equipment to Add</p>
+                                </div>
+                            </div>
+                            <form></form>
+                            <div class="row backgroundBlue textCenter paddingBottom">
+                                <div class="col-xs-12 col-sm-4">
+                                    <p for="category">Equipment Category</p>
+                                    <select id="category" name="category">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <p for="name">Equipment Name</p>
+                                    <select id="name" name="name">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <p for="units">Consumption Units</p>
+                                    <select id="units" name="units">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <form class="row center consumption">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="row">
+                                        <input type="number" class="formControl textCenter col-xs-3 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3" id="consumption" aria-describedby="consumption" value="0" />
+                                        <label for="consumption" class="col-xs-6 col-sm-6 col-md-6 middle"><span id="unit">Type of Unit</span> Consumption</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="number" class="formControl textCenter col-xs-3 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3" id="quantity" aria-describedby="quantity" value="0" />
+                                        <label for="quantity" class="col-xs-6 col-sm-6 col-md-6 middle">Quantity</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="number" class="formControl textCenter col-xs-3 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3" id="days" aria-describedby="days" value="0" />
+                                        <label for="days" class="col-xs-6 col-sm-6 col-md-6 middle">Operating Days per Week</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="number" class="formControl textCenter col-xs-3 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3" id="hours" aria-describedby="hours" value="0" />
+                                        <label for="hours" class="col-xs-6 col-sm-6 col-md-6 middle">Operating Hours per 24h</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 backgroundBlue textCenter middle paddingTop paddingBottom">
+                                    <div class="row">
+                                        <input type="number" class="formControl textCenter col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="use" aria-describedby="use" value="0" />
+                                        <label for="use" class="col-xs-6 col-sm-6 col-md-6 middle">Percentage of Use</label>
+                                    </div>
+                                </div>
+                                <button onclick="alert()" class="formControl" value="Add Equipment">Add Equipment</button>
+                            </form>
+                        </section>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="row middle tableA">
+                                    <table class="tableA">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Name</th>
+                                                <th>Qty.</th>
+                                                <th>Kilowatts</th>
+                                                <th>% of Use</th>
+                                                <th class="links"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="textCenter">
+                                                <td>Category</td>
+                                                <td>Name Test Overflow ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+                                                <td>10</td>
+                                                <td>1000</td>
+                                                <td>100%</td>
+                                                <td class="textRight links"><a href="">edit</a> | <a href="">delete</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="bottomNavigation">
+                        <div class="bottomNavigation">
+                            <div class="row end-sm">
+                                <div class="col-xs-12 col-sm-offset-8 col-sm-4 col-md-offset-8 col-md-4">
+                                    <button class="smbuttonBlue">Save</button>
+                                </div>
+                            </div>
+                            <div class="row end-sm">
+                                <div class="col-xs-12 col-sm-10 col-md-10 middle message">
+                                    <h2>Finished adding equipment?</h2>
+                                </div>
+                                <div class="col-xs-12 col-sm-2 col-md-2 middle">
+                                    <button class="smbuttonRed">Next</button>
+                                </div>
+                            </div>
+                            <div class="row end-sm start-xs">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-6 helper">
+                                    <a class="backward">Go back to this Production Meter's Information</a>
+                                    <a class="backward">Go back to this Area's Information</a>
+                                    <a class="forward">Go to next Area</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 sidebar">
+                <!-- Sidebar -->
+                <section id="nav">
+                    <div class="sidebar">
+                        <button class="buttonBlue">Back to dashboard</button>
+                        <button class="buttonRed">SAVE ALL PROGRESS</button>
+                        <button class="buttonRed">SIGN OUT</button>
+                    </div>
+                    <button id="sL_toggle">Show Location Information</button>
+                    <div class="sidebar backgroundBlue" id="sL_expand">
+                        <div class="infoBlock location">
+                            <h3>Location Name</h3>
+                            <p>123 Mainstreet</p>
+                            <p>Salt Lake City, Utah 84101</p>
+                            <a href="">Change Location Information</a>
+                        </div>
+                        <div class="infoBlock account">
+                            <p>Account Holder</p>
+                            <p>owner@email.com</p>
+                            <p>900-893-1029</p>
+                            <a href="">Change Account Information</a>
+                        </div>
+                        <div class="infoBlock meters">
+                            <h3>Production Meters</h3>
+                            <div class="meter" id="###">
+                                <div class="row id">
+                                    <div class="col-xs">
+                                        <p>Meter ID ###</p>
+                                    </div>
+                                    <div class="col-xs">
+                                        <a href="">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="row area">
+                                    <a href="">Area</a>
+                                </div>
+                            </div>
+                            <div class="meter" id="###">
+                                <div class="row id">
+                                    <div class="col-xs">
+                                        <p>Meter ID ###</p>
+                                    </div>
+                                    <div class="col-xs">
+                                        <a href="">VIEW</a>
+                                    </div>
+                                </div>
+                                <div class="row area">
+                                    <a href="">Area</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row breadcrumbsMobile">
+                        <div class="col-xs-12">
+                            <button id="bM_toggle">Show Steps</button>
+                        </div>
+                        <div id="bM_expand" style="display:none">
+                            <div class="col-xs-12">
+                                <a href="">Study Location</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Monthly Electric Consumption</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Add Meter Details</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Add Meter Areas</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="" class="current">Add Equipment</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Review Your Study</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="">Submit for Review</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/Tooltip.js"></script>
+    <script>
+        function alert() {
+            console.log("test");
+        }
+    </script>
+</body>
+
+</html>
