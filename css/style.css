@@ -125,6 +125,10 @@ td:nth-child(2) {
     background-color: #b52007;
 }
 
+.buttonRed:disabled {
+  background-color: #ccc;
+}
+
 .smbuttonRed {
     background-color: #e24227;
     border: 2px solid #e24227;
